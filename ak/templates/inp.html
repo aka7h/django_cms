@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<table class='table'>
+		<tr>
+			<th>Name</th>
+			<th>Phone Number</th>
+			<th>Email id</th>
+		</tr>
+		{% if name_list %}
+		{% for n in name_list %}
+		<tr>
+			<th>{{n.name}}</th>
+			<th>{{n.phone}}</th>
+			<th>{{n.email}}</th>	
+		</tr>
+			{% endfor %}
+			{% endif %}
+	</table>
+
+{% endblock content %}
+
